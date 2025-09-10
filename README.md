@@ -28,11 +28,11 @@ docker run -it --rm -u dafoamuser --mount \
 ```
 
 ## Instructions to run the script for developers 
-To further develop the CSDL/DAFoam interface, it is recommended to install all dependencies from scratch. For example, please refer to the DAFoam installation guide to set up the required prerequisites: https://dafoam.github.io/mydoc_installation_source.html#prerequisites. Developers can also add additional package installations in Dockerfile and build a new image to run the script build upon the existing one (https://github.com/cfdkang/Dockerfile).
+To further develop the CSDL/DAFoam interface, it is recommended to install all dependencies from scratch. For example, please refer to the DAFoam installation guide to set up the required prerequisites: https://dafoam.github.io/mydoc_installation_source.html#prerequisites. Developers can also add additional package installations in Dockerfile and build a new image to run the script build upon the existing one (https://github.com/cfdkang/Dockerfile/blob/main/Dockerfile).
 
 (1) Download the Dockerfile:
 ```bash
-https://github.com/cfdkang/Dockerfile
+https://github.com/cfdkang/Dockerfile/blob/main/Dockerfile
 ```
 
 (2) Build the Dockerfile
