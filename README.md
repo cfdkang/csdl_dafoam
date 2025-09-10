@@ -1,21 +1,21 @@
-# csdl_dafoam: CSDL - DAFoam interface and 2-D airfoil aerodynamic shape optimization tutorial script
+# csdl_dafoam: CSDL - DAFoam interface and tutorial script for 2D airfoil aerodynamic shape optimization
 
-**csdl_dafoam** is a CSDL-DAFoam interface to implement aerodynamic shape optimization. This interface utilizes **lsdo_geo** for geometric parametrization, **IDWarp** for mesh deformation, **modopt** for optimizer, **CSDL** for automatic differentiation, and **DAFoam** for primal and adjoint computations. 
+**csdl_dafoam** is a CSDL-DAFoam interface to implement aerodynamic shape optimization. It integrates **lsdo_geo** for geometric parameterization, **IDWarp** for mesh deformation, **modopt** as the optimizer, **CSDL** for automatic differentiation, and **DAFoam** for primal and adjoint computations. 
 
 ## Instructions to run the script for users
-To install **csdl_fwh**, first clone the repository and install using pip. On the terminal or command line, run
+To run the script, first pull the Docker image and run the script as follows:
 
-(1) pull the docker images from Docker Hub
+(1) pull the Docker images from Docker Hub
 ```bash
 docker pull cfdkang/csdl_dafoam
 ```
 
-(2) Check the pulled image
+(2) Check the pulled Docker image
 ```bash
 docker images
 ```
 
-(3) run (mount) docker image
+(3) Run (Mount) the Docker image
 ```bash
 docker run -it --rm -u dafoamuser --mount \
 "type=bind,src=$(pwd),target=/home/dafoamuser/mount" \
@@ -27,25 +27,25 @@ docker run -it --rm -u dafoamuser --mount \
 ./run.sh
 ```
 
-## Instructions to run the script for users
-To install **csdl_fwh**, first clone the repository and install using pip. On the terminal or command line, run
+## Instructions to run the script for developers 
+To further develop the CSDL/DAFoam interface, it is recommended to install all dependencies from scratch. For example, please refer to the DAFoam installation guide to set up the required prerequisites: https://dafoam.github.io/mydoc_installation_source.html#prerequisites. Developers can also add additional package installations in Dockerfile and build a new image to run the script build upon the existing one (https://github.com/cfdkang/Dockerfile).
 
-(1) Download the dockerfile:
+(1) Download the Dockerfile:
 ```bash
 https://github.com/cfdkang/Dockerfile
 ```
 
-(2) Build the dockerfile
+(2) Build the Dockerfile
 ```bash
 DOCKER_BUILDKIT=1 docker build --progress=plain -t csdl_dafoam:latest .
 ```
 
-(3) Check the pulled image
+(3) Check the pulled Docker image
 ```bash
 docker images
 ```
 
-(4) run (mount) docker image
+(4) Run (Mount) the Docker image
 ```bash
 docker run -it --rm -u dafoamuser --mount \
 "type=bind,src=$(pwd),target=/home/dafoamuser/mount" \
