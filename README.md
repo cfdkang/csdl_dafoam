@@ -19,7 +19,7 @@ docker images
 ```bash
 docker run -it --rm -u dafoamuser --mount \
 "type=bind,src=$(pwd),target=/home/dafoamuser/mount" \
--w /home/dafoamuser/mount dafoam/cfdkang/csdl_dafoam:latest bash
+-w /home/dafoamuser/mount cfdkang/csdl_dafoam:latest bash
 ```
 
 (4) You are ready to run the tutorial script
