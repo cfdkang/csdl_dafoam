@@ -2,7 +2,7 @@
 
 **csdl_dafoam** is a CSDL-DAFoam interface to implement aerodynamic shape optimization. It integrates **lsdo_geo** for geometric parameterization, **IDWarp** for mesh deformation, **modopt** as the optimizer, **CSDL** for automatic differentiation, and **DAFoam** for primal and adjoint computations. 
 
-#### Distribution Statement
+### Distribution Statement
 **Distribution Statement A**: Approved for public release; distribution is unlimited. PA\# AFRL-2025-3820.
 
 ## Instructions to run the script for users
